@@ -45,6 +45,7 @@ jobs:
         id: storefront-build
         run: HYDROGEN_ASSET_BASE_URL=${{ steps.base-url.outputs.URL }} yarn build
 
+      # Push assets to Oxygen
       - name: Publish to Oxygen
         id: deploy
         uses: shopify/oxygenctl-action@v2
